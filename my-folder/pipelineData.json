@@ -45,10 +45,10 @@
         "user_properties": []
       },
       {
-        "u_id": "5f957d81-fc4a-1377-cb8f-9b3d764c4e95",
-        "id": "3-3",
-        "opr_name": "approx_count",
-        "name": "Approx Count",
+        "u_id": "1aef90d6-8cc8-3aba-3057-61fe1d57dc9f",
+        "id": "3-15",
+        "opr_name": "filter",
+        "name": "Filter",
         "description": "des",
         "activity_state": false,
         "timeout": "10",
@@ -58,29 +58,11 @@
         "secure_output": true,
         "input_items": [
           {
-            "column_name": "remaining_jobs",
-            "approximate": true,
-            "output_column": "count"
-          }
-        ],
-        "user_properties": []
-      },
-      {
-        "u_id": "9b361906-d3ca-3b6b-bd1e-e119d83cc00d",
-        "id": "2-1",
-        "opr_name": "JDBC_writer",
-        "name": "WriteJDBC",
-        "description": "des",
-        "activity_state": false,
-        "timeout": "10",
-        "retry": "2",
-        "retry_interval": "2",
-        "secure_input": true,
-        "secure_output": true,
-        "input_items": [
-          {
-            "conn_id": 7422,
-            "tbname": "add_col_new"
+            "username": "2",
+            "password": "2",
+            "port number": "2",
+            "database": "2",
+            "terms": true
           }
         ],
         "user_properties": []
