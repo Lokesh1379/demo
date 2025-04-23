@@ -1,17 +1,44 @@
 [
   {
-    "id": "55c0e55d-0f9b-9e51-01b4-bae8886919a5",
+    "id": "bc6946ff-cacf-4fc2-e04e-3ed391730776",
     "job_nodes": [
       {
-        "id": "3-41",
-        "name": "Web",
-        "imgpath": "/images/sidebar/web.png",
-        "oprName": "web",
-        "yamlPath": "/path/to/transformations/web.yaml",
-        "x": 192.109375,
-        "y": 162.5,
-        "uniqueId": "1aaab453-50b4-0133-fcfa-4975afa808f9",
-        "u_id": "88deaadc-ab8a-61af-cf4e-2ee68667d228",
+        "id": "1-1",
+        "name": "ReadJDBC",
+        "oprName": "JDBC_reader",
+        "type": "read io",
+        "connection_type": "JDBC",
+        "yamlPath": "/path/to/IOConnectors/ReadIO/JDBC_reader.yaml",
+        "imgpath": "/images/sidebar/JDBC_reader.png",
+        "x": 216.109375,
+        "y": 87.5,
+        "uniqueId": "bcfe4149-cf24-68ab-6b03-a1f4a918e12e",
+        "u_id": "2dc59837-f9c9-e634-a9b3-1c11058457d1",
+        "activity_state": false
+      },
+      {
+        "id": "3-3",
+        "name": "Approx Count",
+        "imgpath": "/images/sidebar/approx.png",
+        "oprName": "approx_count",
+        "yamlPath": "/path/to/transformations/approx_count.yaml",
+        "x": 403.109375,
+        "y": 85.5,
+        "uniqueId": "84b78939-9bdd-7e6d-640d-72ce2c847ceb",
+        "u_id": "d39d66a0-c741-3aa9-cdae-c3175d90b7ef",
+        "activity_state": false
+      },
+      {
+        "id": "2-1",
+        "name": "WriteJDBC",
+        "type": "write io",
+        "oprName": "JDBC_writer",
+        "imgpath": "/images/sidebar/JDBC_writer.png",
+        "yamlPath": "/path/to/IOConnectors/WriteIO/JDBC_writer.yaml",
+        "x": 578.109375,
+        "y": 85.5,
+        "uniqueId": "550f2fc7-aff6-111b-fd78-d62e87a1f65f",
+        "u_id": "483b3f89-618f-f0be-9b41-194d8156e8e6",
         "activity_state": false
       }
     ],
