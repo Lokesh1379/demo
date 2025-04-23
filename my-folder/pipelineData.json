@@ -1,6 +1,6 @@
 [
   {
-    "id": "55c0e55d-0f9b-9e51-01b4-bae8886919a5",
+    "id": "bc6946ff-cacf-4fc2-e04e-3ed391730776",
     "job_name": "Pipeline 1",
     "run_type": "spark",
     "Global_variables": [],
@@ -13,21 +13,21 @@
     "connections": [
       {
         "connection_name": "JDBC connection",
-        "url": "jdbc:mysql://34.57.144.120:3306",
-        "username": "remote_user",
-        "password": "spark",
+        "url": "jdbc:mysql://localhost:3306",
+        "username": "Akash.shetty@indiainsurancedeals.com",
+        "password": "Loki@1379",
         "database": "jobportal",
         "provider": "MySQL",
-        "mysql_connector": "/home/amruthabs122/mysql-connector-j-8.0.28.jar",
-        "conn_id": 7422
+        "mysql_connector": "path",
+        "conn_id": 1092
       }
     ],
     "tasks": [
       {
-        "u_id": "1aaab453-50b4-0133-fcfa-4975afa808f9",
-        "id": "3-41",
-        "opr_name": "web",
-        "name": "Web",
+        "u_id": "bcfe4149-cf24-68ab-6b03-a1f4a918e12e",
+        "id": "1-1",
+        "opr_name": "JDBC_reader",
+        "name": "ReadJDBC",
         "description": "des",
         "activity_state": false,
         "timeout": "10",
@@ -37,10 +37,53 @@
         "secure_output": true,
         "input_items": [
           {
-            "headers": "w",
-            "method": "w",
-            "url": "w",
-            "": "w"
+            "conn_id": 1092,
+            "tbname": "candidate",
+            "query": "select * from candidate"
+          }
+        ],
+        "user_properties": []
+      },
+      {
+        "u_id": "84b78939-9bdd-7e6d-640d-72ce2c847ceb",
+        "id": "3-3",
+        "opr_name": "approx_count",
+        "name": "Approx Count",
+        "description": "des",
+        "activity_state": false,
+        "timeout": "10",
+        "retry": "2",
+        "retry_interval": "2",
+        "secure_input": true,
+        "secure_output": true,
+        "input_items": [
+          {
+            "column_name": "status",
+            "approximate": true,
+            "output_column": "we"
+          }
+        ],
+        "user_properties": [],
+        "dependency": [
+          "bcfe4149-cf24-68ab-6b03-a1f4a918e12e"
+        ]
+      },
+      {
+        "u_id": "550f2fc7-aff6-111b-fd78-d62e87a1f65f",
+        "id": "2-1",
+        "opr_name": "JDBC_writer",
+        "name": "WriteJDBC",
+        "description": "des",
+        "activity_state": false,
+        "timeout": "10",
+        "retry": "2",
+        "retry_interval": "2",
+        "secure_input": true,
+        "secure_output": true,
+        "input_items": [
+          {
+            "conn_id": 1092,
+            "tbname": "add_new_column"
           }
         ],
         "user_properties": []
