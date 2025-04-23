@@ -17,28 +17,15 @@
         "activity_state": false
       },
       {
-        "id": "3-3",
-        "name": "Approx Count",
-        "imgpath": "/images/sidebar/approx.png",
-        "oprName": "approx_count",
-        "yamlPath": "/path/to/transformations/approx_count.yaml",
-        "x": 302.109375,
-        "y": 73.5,
-        "uniqueId": "5f957d81-fc4a-1377-cb8f-9b3d764c4e95",
-        "u_id": "c9744aa5-aca5-839f-b7f1-1dc64f77946c",
-        "activity_state": false
-      },
-      {
-        "id": "2-1",
-        "name": "WriteJDBC",
-        "type": "write io",
-        "oprName": "JDBC_writer",
-        "imgpath": "/images/sidebar/JDBC_writer.png",
-        "yamlPath": "/path/to/IOConnectors/WriteIO/JDBC_writer.yaml",
-        "x": 478.109375,
-        "y": 66.5,
-        "uniqueId": "9b361906-d3ca-3b6b-bd1e-e119d83cc00d",
-        "u_id": "e23ca9c9-4b32-8ed3-c07c-44a9b8d41767",
+        "id": "3-15",
+        "name": "Filter",
+        "imgpath": "/images/sidebar/filter.png",
+        "oprName": "filter",
+        "yamlPath": "/path/to/transformations/filter.yaml",
+        "x": 304.109375,
+        "y": 58.5,
+        "uniqueId": "1aef90d6-8cc8-3aba-3057-61fe1d57dc9f",
+        "u_id": "f2b69a5d-8e87-f2b6-a8cf-9f26f52442a3",
         "activity_state": false
       }
     ],
