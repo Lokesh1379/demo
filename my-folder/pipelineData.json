@@ -24,10 +24,10 @@
     ],
     "tasks": [
       {
-        "u_id": "7300d91a-3de0-fe3d-502d-8480217aa478",
-        "id": "1-1",
-        "opr_name": "JDBC_reader",
-        "name": "ReadJDBC",
+        "u_id": "1aaab453-50b4-0133-fcfa-4975afa808f9",
+        "id": "3-41",
+        "opr_name": "web",
+        "name": "Web",
         "description": "des",
         "activity_state": false,
         "timeout": "10",
@@ -37,32 +37,10 @@
         "secure_output": true,
         "input_items": [
           {
-            "conn_id": 7422,
-            "tbname": "candidate",
-            "query": "SELECT * FROM CANDIDATE"
-          }
-        ],
-        "user_properties": []
-      },
-      {
-        "u_id": "1aef90d6-8cc8-3aba-3057-61fe1d57dc9f",
-        "id": "3-15",
-        "opr_name": "filter",
-        "name": "Filter",
-        "description": "des",
-        "activity_state": false,
-        "timeout": "10",
-        "retry": "2",
-        "retry_interval": "2",
-        "secure_input": true,
-        "secure_output": true,
-        "input_items": [
-          {
-            "username": "2",
-            "password": "2",
-            "port number": "2",
-            "database": "2",
-            "terms": true
+            "headers": "w",
+            "method": "w",
+            "url": "w",
+            "": "w"
           }
         ],
         "user_properties": []
