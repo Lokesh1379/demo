@@ -1,0 +1,21 @@
+[
+  {
+    "id": "55c0e55d-0f9b-9e51-01b4-bae8886919a5",
+    "edges": [
+      {
+        "source": "7300d91a-3de0-fe3d-502d-8480217aa478",
+        "sourceHandle": null,
+        "target": "85cc085b-4bcd-ba17-b1e9-aa3ec131a25a",
+        "targetHandle": null,
+        "id": "reactflow__edge-7300d91a-3de0-fe3d-502d-8480217aa478-85cc085b-4bcd-ba17-b1e9-aa3ec131a25a"
+      },
+      {
+        "source": "85cc085b-4bcd-ba17-b1e9-aa3ec131a25a",
+        "sourceHandle": null,
+        "target": "76a656b0-790a-e324-43d1-e08942a9850e",
+        "targetHandle": null,
+        "id": "reactflow__edge-85cc085b-4bcd-ba17-b1e9-aa3ec131a25a-76a656b0-790a-e324-43d1-e08942a9850e"
+      }
+    ]
+  }
+]
