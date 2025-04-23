@@ -1,0 +1,47 @@
+[
+  {
+    "id": "55c0e55d-0f9b-9e51-01b4-bae8886919a5",
+    "job_nodes": [
+      {
+        "id": "1-1",
+        "name": "ReadJDBC",
+        "oprName": "JDBC_reader",
+        "type": "read io",
+        "connection_type": "JDBC",
+        "yamlPath": "/path/to/IOConnectors/ReadIO/JDBC_reader.yaml",
+        "imgpath": "/images/sidebar/JDBC_reader.png",
+        "x": 127.109375,
+        "y": 78.5,
+        "uniqueId": "7300d91a-3de0-fe3d-502d-8480217aa478",
+        "u_id": "5de5d215-3a31-c3cf-e68a-de06e9bf370d",
+        "activity_state": false
+      },
+      {
+        "id": "3-3",
+        "name": "Approx Count",
+        "imgpath": "/images/sidebar/approx.png",
+        "oprName": "approx_count",
+        "yamlPath": "/path/to/transformations/approx_count.yaml",
+        "x": 302.109375,
+        "y": 73.5,
+        "uniqueId": "5f957d81-fc4a-1377-cb8f-9b3d764c4e95",
+        "u_id": "c9744aa5-aca5-839f-b7f1-1dc64f77946c",
+        "activity_state": false
+      },
+      {
+        "id": "2-1",
+        "name": "WriteJDBC",
+        "type": "write io",
+        "oprName": "JDBC_writer",
+        "imgpath": "/images/sidebar/JDBC_writer.png",
+        "yamlPath": "/path/to/IOConnectors/WriteIO/JDBC_writer.yaml",
+        "x": 478.109375,
+        "y": 66.5,
+        "uniqueId": "9b361906-d3ca-3b6b-bd1e-e119d83cc00d",
+        "u_id": "e23ca9c9-4b32-8ed3-c07c-44a9b8d41767",
+        "activity_state": false
+      }
+    ],
+    "run_type": ""
+  }
+]
