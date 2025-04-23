@@ -1,7 +1,7 @@
 [
   {
     "id": "55c0e55d-0f9b-9e51-01b4-bae8886919a5",
-    "job_name": "Pipeline 1",
+    "job_name": "Add column",
     "run_type": "spark",
     "Global_variables": [],
     "Pipeline_variables": [],
@@ -24,23 +24,65 @@
     ],
     "tasks": [
       {
-        "u_id": "1aaab453-50b4-0133-fcfa-4975afa808f9",
-        "id": "3-41",
-        "opr_name": "web",
-        "name": "Web",
-        "description": "des",
+        "u_id": "7b396b8b-12de-25df-c26e-49904d4860c7",
+        "id": "1-1",
+        "opr_name": "JDBC_reader",
+        "name": "ReadJDBC",
+        "description": "",
         "activity_state": false,
-        "timeout": "10",
-        "retry": "2",
-        "retry_interval": "2",
-        "secure_input": true,
-        "secure_output": true,
+        "timeout": "",
+        "retry": "",
+        "retry_interval": "",
+        "secure_input": false,
+        "secure_output": false,
         "input_items": [
           {
-            "headers": "w",
-            "method": "w",
-            "url": "w",
-            "": "w"
+            "conn_id": "",
+            "tbname": "",
+            "query": ""
+          }
+        ],
+        "user_properties": []
+      },
+      {
+        "u_id": "95444879-b958-b797-d850-1521f30f17d2",
+        "id": "3-1",
+        "opr_name": "Add_column",
+        "name": "Add Column",
+        "description": "",
+        "activity_state": false,
+        "timeout": "",
+        "retry": "",
+        "retry_interval": "",
+        "secure_input": false,
+        "secure_output": false,
+        "input_items": [
+          {
+            "column_name": "",
+            "value": ""
+          }
+        ],
+        "user_properties": [],
+        "dependency": [
+          "7b396b8b-12de-25df-c26e-49904d4860c7"
+        ]
+      },
+      {
+        "u_id": "a4faa8fa-2830-1bab-3a5e-ba05a07e62f1",
+        "id": "2-1",
+        "opr_name": "JDBC_writer",
+        "name": "WriteJDBC",
+        "description": "",
+        "activity_state": false,
+        "timeout": "",
+        "retry": "",
+        "retry_interval": "",
+        "secure_input": false,
+        "secure_output": false,
+        "input_items": [
+          {
+            "conn_id": "",
+            "tbname": ""
           }
         ],
         "user_properties": []
