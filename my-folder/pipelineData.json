@@ -1,0 +1,94 @@
+[
+  {
+    "id": "55c0e55d-0f9b-9e51-01b4-bae8886919a5",
+    "job_name": "Pipeline 1",
+    "run_type": "spark",
+    "Global_variables": [],
+    "Pipeline_variables": [],
+    "settings": {
+      "concurrancy": "",
+      "elapsed_time_metric": "",
+      "isElapsedTimeMetricChecked": false
+    },
+    "connections": [
+      {
+        "connection_name": "JDBC connection",
+        "url": "jdbc:mysql://34.57.144.120:3306",
+        "username": "remote_user",
+        "password": "spark",
+        "database": "jobportal",
+        "provider": "MySQL",
+        "mysql_connector": "/home/amruthabs122/mysql-connector-j-8.0.28.jar",
+        "conn_id": 7422
+      }
+    ],
+    "tasks": [
+      {
+        "u_id": "7300d91a-3de0-fe3d-502d-8480217aa478",
+        "id": "1-1",
+        "opr_name": "JDBC_reader",
+        "name": "ReadJDBC",
+        "description": "des",
+        "activity_state": false,
+        "timeout": "10",
+        "retry": "2",
+        "retry_interval": "2",
+        "secure_input": true,
+        "secure_output": true,
+        "input_items": [
+          {
+            "conn_id": 7422,
+            "tbname": "candidate",
+            "query": "SELECT * FROM CANDIDATE"
+          }
+        ],
+        "user_properties": []
+      },
+      {
+        "u_id": "5f957d81-fc4a-1377-cb8f-9b3d764c4e95",
+        "id": "3-3",
+        "opr_name": "approx_count",
+        "name": "Approx Count",
+        "description": "des",
+        "activity_state": false,
+        "timeout": "10",
+        "retry": "2",
+        "retry_interval": "2",
+        "secure_input": true,
+        "secure_output": true,
+        "input_items": [
+          {
+            "column_name": "remaining_jobs",
+            "approximate": true,
+            "output_column": "count"
+          }
+        ],
+        "user_properties": []
+      },
+      {
+        "u_id": "9b361906-d3ca-3b6b-bd1e-e119d83cc00d",
+        "id": "2-1",
+        "opr_name": "JDBC_writer",
+        "name": "WriteJDBC",
+        "description": "des",
+        "activity_state": false,
+        "timeout": "10",
+        "retry": "2",
+        "retry_interval": "2",
+        "secure_input": true,
+        "secure_output": true,
+        "input_items": [
+          {
+            "conn_id": 7422,
+            "tbname": "add_col_new"
+          }
+        ],
+        "user_properties": []
+      }
+    ],
+    "isStarted": true,
+    "triggers": {},
+    "reRun": false,
+    "readOnly": false
+  }
+]
