@@ -1,6 +1,6 @@
 [
   {
-    "id": "55c0e55d-0f9b-9e51-01b4-bae8886919a5",
+    "id": "e0a75757-c98f-ab4d-dd59-6c3dcbfe10a0",
     "job_name": "Pipeline 1",
     "run_type": "spark",
     "Global_variables": [],
@@ -19,15 +19,15 @@
         "database": "jobportal",
         "provider": "MySQL",
         "mysql_connector": "/home/amruthabs122/mysql-connector-j-8.0.28.jar",
-        "conn_id": 7422
+        "conn_id": 9494
       }
     ],
     "tasks": [
       {
-        "u_id": "1aaab453-50b4-0133-fcfa-4975afa808f9",
-        "id": "3-41",
-        "opr_name": "web",
-        "name": "Web",
+        "u_id": "4b136dcf-4499-0e41-6787-819e86fd22b3",
+        "id": "1-1",
+        "opr_name": "JDBC_reader",
+        "name": "ReadJDBC",
         "description": "des",
         "activity_state": false,
         "timeout": "10",
@@ -37,10 +37,52 @@
         "secure_output": true,
         "input_items": [
           {
-            "headers": "w",
-            "method": "w",
-            "url": "w",
-            "": "w"
+            "conn_id": 9494,
+            "tbname": "candidate",
+            "query": "SELECT * FROM CANDIDATE"
+          }
+        ],
+        "user_properties": []
+      },
+      {
+        "u_id": "fa10ddad-1589-a114-4a3e-e1972611825c",
+        "id": "3-1",
+        "opr_name": "Add_column",
+        "name": "Add Column",
+        "description": "des",
+        "activity_state": false,
+        "timeout": "10",
+        "retry": "2",
+        "retry_interval": "2",
+        "secure_input": true,
+        "secure_output": true,
+        "input_items": [
+          {
+            "column_name": "status",
+            "value": "active"
+          }
+        ],
+        "user_properties": [],
+        "dependency": [
+          "4b136dcf-4499-0e41-6787-819e86fd22b3"
+        ]
+      },
+      {
+        "u_id": "bd6465f2-08b9-8284-ca56-6fd85764d2e1",
+        "id": "2-1",
+        "opr_name": "JDBC_writer",
+        "name": "WriteJDBC",
+        "description": "des",
+        "activity_state": false,
+        "timeout": "10",
+        "retry": "2",
+        "retry_interval": "2",
+        "secure_input": true,
+        "secure_output": true,
+        "input_items": [
+          {
+            "conn_id": 9494,
+            "tbname": "add_new_column"
           }
         ],
         "user_properties": []
